@@ -28,4 +28,6 @@ BootStrap 4.0+ Nav-Bar HTML Source:
 		</div>
 	</div>
 
-- Make changes to the '@Html.ActionLink' as per your requirmentsBootStrap 4.0+ Nav-Bar HTML:
+- Make changes to the '@Html.ActionLink' as per your project requirments.
+
+- Enjoy!
