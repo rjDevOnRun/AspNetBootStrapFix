@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET MVC NavBar Fix</h1>
+    <p class="lead">How to fix the Nav-Bar problem after updating Nuget packages to BootStrap Ver: 4.0</p>
+    <p><a href="https://stackoverflow.com/questions/48550955/mvc-bootstrap-navbar-not-working-after-running-nuget-updates" class="btn btn-primary btn-lg">Reference [StackOverFlow] &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Steps</h2>
+        <p> Install and register 'FontAwesome' as shown in adjacent sections</p>
+        <p> Modify the '_Layout.cshtml' - 'Nav-Bar div' html with code displayed at bottom: </p>
+        <p> Make changes to the 'ActionLink' as per your requirments</p>
+    </div>
+    <div class="col-md-4">
+        <h2>FontAwesome</h2>
+        <p> Download 'FontAwesome' Nuget and install via package manager </p>
+        <p>Add 'FontAwesome' css and js files as Bundle in 'BundleConfig'</p>
+        <p>Add 'FontAwesome' css and js files as Bundle in 'BundleConfig'</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Register</h2>
+        <p>Register 'FontAwesome' Bundle in the _Layout/.cshtml</p>
+    </div>
+
+    <div class="col-md-4">
+        <h4><i><u>BootStrap 4.0+ Nav-Bar HTML:</u></i></h4>
+        <xmp>
+            <div class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        @Html.ActionLink("Ebille", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+                    <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav mr-auto">
+                            <li class="nav-item">@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li class="nav-item">@Html.ActionLink("API", "Index", "Help", new { area = "" }, new { @class = "nav-link" })</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </xmp>
+    </div>
+</div>
